@@ -148,7 +148,7 @@ void Buffer_Realloc (JSONObjectEncoder *enc, size_t cbNeeded)
   enc->end = enc->start + newSize;
 }
 
-FASTCALL_ATTR INLINE_PREFIX void FASTCALL_MSVC Buffer_AppendShortHexUnchecked (char *outputOffset, unsigned short value)
+void Buffer_AppendShortHexUnchecked (char *outputOffset, unsigned short value)
 {
   *(outputOffset++) = g_hexChars[(value & 0xf000) >> 12];
   *(outputOffset++) = g_hexChars[(value & 0x0f00) >> 8];
